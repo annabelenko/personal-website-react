@@ -1,0 +1,47 @@
+/* src/App.css */
+
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  background-color: #f0f0f0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #29d;
+  transform-origin: 0%;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+}
+
+code {
+  background: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
