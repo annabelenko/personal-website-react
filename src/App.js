@@ -3,13 +3,14 @@ import React, { useState } from "react";
 import "./App.css";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Example } from "./components/Example";
+import { Refresh } from "./components/Refresh";
 
 export default function App() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
 
   const [count, setCount] = useState(0);
@@ -28,8 +29,7 @@ export default function App() {
       <div className="example-container">
         <Example key={count} />
       </div>
+      <Refresh onClick={handleRefreshClick} />
     </>
   );
 }
-
-
