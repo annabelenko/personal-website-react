@@ -12,12 +12,10 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">MyApp</div>
+      <div className="navbar-logo">Anna Belenko</div>
       <div className={`navbar-links ${isOpen ? "open" : ""}`}>
-        <a href="#home">Home</a>
+        <a href="#home">Work</a>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
       </div>
       <div className="navbar-toggle" onClick={toggleMenu}>
         <motion.div

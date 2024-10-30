@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Example } from "./components/Example";
-import { Refresh } from "./components/Refresh";
+import { Navbar } from "./components/Navbar";
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -15,13 +15,9 @@ export default function App() {
 
   const [count, setCount] = useState(0);
 
-  const handleRefreshClick = () => {
-    setCount(count + 1);
-    console.log("Refresh button clicked");
-  };
-
   return (
     <>
+      <Navbar />
       <motion.div className="progress-bar" style={{ scaleX }} />
       <h1>
         <code>useScroll</code> with spring smoothing
@@ -29,7 +25,6 @@ export default function App() {
       <div className="example-container">
         <Example key={count} />
       </div>
-      <Refresh onClick={handleRefreshClick} />
     </>
   );
 }
