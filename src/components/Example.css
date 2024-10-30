@@ -1,17 +1,21 @@
 /* src/components/Example.css */
-.example-container {
+  .example-container {
     position: relative;
     width: 100%;
     height: 100vh; /* Full viewport height */
-    overflow: visible; /* Allow overflow to be visible */
+    display: flex; /* Center content inside */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    overflow: visible; /* Prevent any overflow */
   }
   
   .example-container div {
     width: 300px; 
     height: 300px;
     position: absolute;
-    top: calc(50% - 300px / 2);
-    left: calc(50% - 300px / 2);
+    background-color: black;
+    border-radius: 15px; /* Optional: Rounded corners */
+
   }
   
   .example-container .drag-area {
