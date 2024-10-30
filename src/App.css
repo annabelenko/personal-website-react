@@ -1,5 +1,3 @@
-/* src/App.css */
-
 /* Import Poppins font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
@@ -30,7 +28,6 @@ code {
   padding: 2px 4px;
   border-radius: 4px;
 }
-
 .refresh {
   padding: 10px;
   position: absolute;

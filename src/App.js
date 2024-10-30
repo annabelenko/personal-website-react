@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Example } from "./components/Example";
-import { Navbar } from "./components/Navbar"; // Import Navbar
+import { Navbar } from "./components/Navbar";
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -14,11 +14,6 @@ export default function App() {
   });
 
   const [count, setCount] = useState(0);
-
-  const handleRefreshClick = () => {
-    setCount(count + 1);
-    console.log("Refresh button clicked");
-  };
 
   return (
     <>
