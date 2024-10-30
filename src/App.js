@@ -4,6 +4,8 @@ import "./App.css";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Example } from "./components/Example";
 import { Refresh } from "./components/Refresh";
+import { Navbar } from "./components/Navbar"; // Import Navbar
+
 
 export default function App() {
   const { scrollYProgress } = useScroll();
