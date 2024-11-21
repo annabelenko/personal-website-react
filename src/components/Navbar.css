@@ -1,72 +1,94 @@
-/* src/components/Navbar.css */
+/* General Navbar Styles */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .navbar-logo {
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.navbar-logo {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  gap: 16px; /* Space between links */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow: visible; /* Ensure content is not hidden */
+  align-items: center; /* Center links vertically */
+  justify-content: flex-end; /* Push links to the right */
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px; /* Add padding for better spacing */
+  white-space: nowrap; /* Prevent text breaking */
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger Menu Icon */
+.navbar-toggle {
+  display: none; /* Hidden by default on larger screens */
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.open {
+  transform: rotate(45deg); /* Rotate the hamburger line */
+}
+
+/* Responsive Styles for Hamburger Menu */
+@media (max-width: 768px) {
   .navbar-links {
-    display: flex;
-    gap: 15px;
-    transition: all 0.3s ease-in-out;
+    display: none; /* Hide links on smaller screens */
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #444; /* Background color for dropdown menu */
+    padding: 10px 20px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
   }
-  
-  .navbar-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
+
+  .navbar-links.open {
+    display: flex; /* Show links when menu is open */
   }
-  
-  .navbar-links a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Hamburger menu icon for smaller screens */
+
   .navbar-toggle {
-    display: none;
-    cursor: pointer;
+    display: block; /* Show hamburger menu toggle on smaller screens */
   }
-  
+
   .hamburger {
-    width: 25px;
-    height: 2px;
-    background-color: white;
-    margin: 5px 0;
     transition: all 0.3s ease-in-out;
   }
-  
+
   .hamburger.open {
-    transform: rotate(45deg);
+    transform: rotate(45deg); /* Transform hamburger into "X" when open */
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .navbar-links {
-      display: none;
-      flex-direction: column;
-      align-items: flex-start;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background-color: #444;
-      padding: 10px 20px;
-    }
-  
-    .navbar-links.open {
-      display: flex;
-    }
-  
-    .navbar-toggle {
-      display: block;
-    }
-  }
+}

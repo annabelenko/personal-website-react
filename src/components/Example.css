@@ -1,37 +1,45 @@
-/* src/components/Example.css */
-  .example-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    display: flex; /* Center content inside */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    overflow: visible; /* Prevent any overflow */
-  }
-  
-  .example-container div {
-    width: 300px; 
-    height: 300px;
-    position: absolute;
-    background-color: black;
-    border-radius: 15px; /* Optional: Rounded corners */
+.example-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
 
-  }
-  
-  .example-container .drag-area {
-    position: absolute;
-    width: 30vw; 
-    height: 300px;
+.example-container div {
+  width: 1000px;
+  height: 500px;
+  position: absolute;
+  background-color: #e4e4e4;
+  border-radius: 15px; /* Optional: Rounded corners */
+  z-index: 1; /* Place background behind everything */
+}
 
-  }
-  
-  .smiley-face {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    cursor: grab;
-    /* Initial position adjustments if necessary */
-    top: calc(50% - 50px); /* Center vertically based on its height */
-    left: calc(50% - 50px); /* Center horizontally based on its width */
-  }
-  
+.drag-area {
+  position: absolute;
+  width: 0vw;
+  height: 200px;
+  z-index: 2; /* Place draggable area above the background */
+}
+
+.smiley-face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  cursor: grab;
+  top: calc(50% - 50px); /* Center vertically based on its height */
+  left: calc(50% - 50px); /* Center horizontally based on its width */
+  z-index: 3; /* Place the image above everything else */
+}
+
+.example-text {
+  position: absolute;
+  top: 20px; /* Adjust to your needs */
+  left: 20px; /* Adjust to your needs */
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #333; /* Ensure text color contrasts the background */
+  z-index: 4; /* Ensure text is on top of all other layers */
+}

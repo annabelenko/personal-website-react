@@ -18,6 +18,7 @@ export const Example = () => {
         drag 
         dragConstraints={constraintsRef} 
       />
+      <p className="example-text"> This is some text</p>
     </div>
   );
 };
