@@ -8,6 +8,18 @@ export const Example = () => {
   const constraintsRef = useRef(null);
   const GRID_SIZE = 400; // 20x20 grid (400 pixels)
   const [colors, setColors] = useState(Array(GRID_SIZE).fill("#f9f9f9"));
+  const [isMobile, setIsMobile] = useState(false); // State to track screen size
+
+  // Detect mobile screen size
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)"); // Mobile breakpoint
+    const handleResize = () => setIsMobile(mediaQuery.matches);
+
+    handleResize(); // Set initial state
+    mediaQuery.addEventListener("change", handleResize); // Add event listener for changes
+
+    return () => mediaQuery.removeEventListener("change", handleResize); // Cleanup
+  }, []);
 
   // Update pixel colors dynamically
   useEffect(() => {
@@ -50,8 +62,15 @@ export const Example = () => {
         <p className="example-text">Hello, I'm</p>
         <h1 className="example-text">ANNA :)</h1>
         <p className="example-subtitle">
-          A passionate <span className="highlight highlight-yellow">designer</span> and{" "}
-          <span className="highlight highlight-blue">software engineer,</span>
+          A passionate{" "}
+          {isMobile ? (
+            "designer and software engineer,"
+          ) : (
+            <>
+              <span className="highlight highlight-yellow">designer</span> and{" "}
+              <span className="highlight highlight-blue">software engineer,</span>
+            </>
+          )}{" "}
           bridging the gap between technology and humans.
         </p>
 
