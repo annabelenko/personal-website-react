@@ -16,7 +16,7 @@ body {
   left: 0;
   height: 5px;
   width: 100%;
-  background: linear-gradient(to right, #f9da13, black); /* Gradient color */
+  background: #f9da13; /* Gradient color */
   transform-origin: 0%;
   z-index: 1100; /* Higher than Navbar (1000) */
 }
