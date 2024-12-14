@@ -26,7 +26,7 @@ export const Example = () => {
     const interval = setInterval(() => {
       setColors((prevColors) =>
         prevColors.map(() => {
-          const gray = Math.floor(Math.random() * 40) + 225; // Generate gray between 225-255
+          const gray = Math.floor(Math.random() * 60) + 225; // Generate gray between 225-255
           return `rgb(${gray}, ${gray}, ${gray})`; // Random gray shade
         })
       );

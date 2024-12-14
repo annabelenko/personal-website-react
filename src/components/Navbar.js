@@ -14,8 +14,7 @@ export const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-logo">Anna Belenko</div>
       <div className={`navbar-links ${isOpen ? "open" : ""}`}>
-        <a href="#home">Work</a>
-        <a href="#about">About</a>
+        <a href="#work">Work</a>
       </div>
       <div className="navbar-toggle" onClick={toggleMenu}>
         <motion.div

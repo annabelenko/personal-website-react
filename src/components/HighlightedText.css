@@ -8,9 +8,10 @@
   
   /* Base highlight style */
   .highlight {
-    padding: 7px;
+    padding: 5px;
     border-radius: 25px;
     color: #000; /* Text color inside highlight */
+    margin: 5px;
   }
   
   /* Specific highlight colors */
@@ -28,4 +29,8 @@
   
   .highlight-pink {
     background-color: #ff85c0; /* Pink */
+  }
+
+  .highlight-gray {
+    background-color: #d7dbdd; /* Pink */
   }
