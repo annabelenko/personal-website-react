@@ -1,32 +1,40 @@
-// src/App.js
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { Example } from "./components/Example";
-import { Refresh } from "./components/Refresh";
-import { Navbar } from "./components/Navbar"; // Import Navbar
-
+import { Example } from "./components/Example"; // "Hello, I'm Anna" Section
+import { Projects } from "./components/Projects"; // Projects Section
+import { Navbar } from "./components/Navbar"; // Navbar Component
+import { HighlightedText } from "./components/HighlightedText"; // Highlighted Text Section
 
 export default function App() {
+  // Scroll progress bar logic
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
 
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <Navbar /> {/* Add Navbar Component */}
+    <div className="App">
+      {/* Fixed Navbar */}
+      <Navbar />
+
+      {/* Scroll Progress Bar */}
       <motion.div className="progress-bar" style={{ scaleX }} />
 
-      <div className="example-container">
-        <Example key={count} />
-      </div>
-    </>
+      {/* Main Sections */}
+      <section className="section example-container">
+        <Example />
+      </section>
+
+      <section className="section highlighted-text-container">
+        <HighlightedText />
+      </section>
+
+      <section className="section projects-container">
+        <Projects />
+      </section>
+    </div>
   );
 }
-
-

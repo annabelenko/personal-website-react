@@ -4,17 +4,23 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1000; /* Ensure Navbar is on top of most content */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
-  background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+  padding: 10px;
+  background-color: #131919;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
+/* Adjust spacing for content under Navbar */
+body {
+  padding-top: 60px; /* Offset content to account for Navbar height */
+}
+
+/* Navbar Logo */
 .navbar-logo {
   font-size: 16px;
   font-weight: 600;

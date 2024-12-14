@@ -1,0 +1,50 @@
+/* Projects container styling */
+.projects-container {
+    padding: 50px;
+    background-color: #ebe1df; /* Light background for contrast */
+    text-align: center;
+  }
+  
+  .projects-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid to display projects */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  /* Individual project card */
+  .project-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #131919; /* Match color theme */
+  }
+  
+  .project-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #555;
+  }
